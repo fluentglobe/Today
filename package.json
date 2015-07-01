@@ -1,0 +1,29 @@
+{
+  "name": "Today",
+  "version": "1.0.0",
+  "description": "Fluent Globe Today app",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fluentglobe/Today.git"
+  },
+  "readme": "README.md",
+  "license": "none",
+  "private": true,
+  "scripts": {
+    "build-app": "node_modules/.bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": {
+    "name": "Henrik Vendelbo"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "mkdirp": "^0.5.0",
+    "semver": "^4.3.3"
+  },
+  "dependencies": {
+    "fluent-play": "git+ssh://git@github.com:fluentglobe/fluent-play#nightly",
+    "phaser": "^2.3.0"
+  }
+}
