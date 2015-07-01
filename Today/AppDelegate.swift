@@ -3,7 +3,7 @@
 //  Today
 //
 //  Created by Henrik Vendelbo on 01/07/2015.
-//  Copyright (c) 2015 Right Here Inc. All rights reserved.
+//  Copyright © 2015 Right Here Inc. All rights reserved.
 //
 
 import UIKit
