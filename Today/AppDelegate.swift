@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Today
 //
-//  Created by Henrik Vendelbo on 01/07/2015.
+//  Created by Henrik Vendelbo on 04/07/2015.
 //  Copyright © 2015 Right Here Inc. All rights reserved.
 //
 
@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //ExercisesURLCache.activate()
+        
         return true
     }
 

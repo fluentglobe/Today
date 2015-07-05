@@ -2,13 +2,13 @@
 //  FirstViewController.swift
 //  Today
 //
-//  Created by Henrik Vendelbo on 01/07/2015.
+//  Created by Henrik Vendelbo on 04/07/2015.
 //  Copyright © 2015 Right Here Inc. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TodayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
