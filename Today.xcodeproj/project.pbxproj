@@ -25,8 +25,8 @@
 		CF15BB6F1B4861910015AE27 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB6E1B4861910015AE27 /* MainViewController.swift */; };
 		CF15BB711B4BACFD0015AE27 /* ExercisesViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB701B4BACFD0015AE27 /* ExercisesViewLayoutAttributes.swift */; };
 		CF15BB731B4C8E940015AE27 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF15BB721B4C8E940015AE27 /* Introduction.storyboard */; };
-		CF15BB761B4C8F770015AE27 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB751B4C8F770015AE27 /* IntroductionViewController.swift */; };
-		CF15BB781B4C924E0015AE27 /* IntroductionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB771B4C924E0015AE27 /* IntroductionPageViewController.swift */; };
+		CF15BB761B4C8F770015AE27 /* IntroductionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB751B4C8F770015AE27 /* IntroductionPageViewController.swift */; };
+		CF15BB781B4C924E0015AE27 /* IndividualPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB771B4C924E0015AE27 /* IndividualPageViewController.swift */; };
 		CF15BB7A1B4C940C0015AE27 /* IntroductionDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB791B4C940C0015AE27 /* IntroductionDataController.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +73,8 @@
 		CF15BB6E1B4861910015AE27 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF15BB701B4BACFD0015AE27 /* ExercisesViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		CF15BB721B4C8E940015AE27 /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
-		CF15BB751B4C8F770015AE27 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
-		CF15BB771B4C924E0015AE27 /* IntroductionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPageViewController.swift; sourceTree = "<group>"; };
+		CF15BB751B4C8F770015AE27 /* IntroductionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPageViewController.swift; sourceTree = "<group>"; };
+		CF15BB771B4C924E0015AE27 /* IndividualPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualPageViewController.swift; sourceTree = "<group>"; };
 		CF15BB791B4C940C0015AE27 /* IntroductionDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				CF15BB721B4C8E940015AE27 /* Introduction.storyboard */,
-				CF15BB771B4C924E0015AE27 /* IntroductionPageViewController.swift */,
-				CF15BB751B4C8F770015AE27 /* IntroductionViewController.swift */,
+				CF15BB771B4C924E0015AE27 /* IndividualPageViewController.swift */,
+				CF15BB751B4C8F770015AE27 /* IntroductionPageViewController.swift */,
 				CF15BB791B4C940C0015AE27 /* IntroductionDataController.swift */,
 			);
 			name = Introduction;
@@ -313,10 +313,10 @@
 			files = (
 				CF15BB6B1B48428E0015AE27 /* ExercisesURLCache.swift-old in Sources */,
 				CF15BB711B4BACFD0015AE27 /* ExercisesViewLayoutAttributes.swift in Sources */,
-				CF15BB781B4C924E0015AE27 /* IntroductionPageViewController.swift in Sources */,
+				CF15BB781B4C924E0015AE27 /* IndividualPageViewController.swift in Sources */,
 				CF15BB321B47E7590015AE27 /* SecondViewController.swift in Sources */,
 				CF15BB2E1B47E7590015AE27 /* AppDelegate.swift in Sources */,
-				CF15BB761B4C8F770015AE27 /* IntroductionViewController.swift in Sources */,
+				CF15BB761B4C8F770015AE27 /* IntroductionPageViewController.swift in Sources */,
 				CF15BB7A1B4C940C0015AE27 /* IntroductionDataController.swift in Sources */,
 				CF15BB6D1B48430E0015AE27 /* ExercisesDataSource.swift in Sources */,
 				CF15BB661B483C930015AE27 /* TodayExercisesViewLayout.swift in Sources */,

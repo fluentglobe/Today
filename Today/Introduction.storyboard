@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Introduction Data Controller-->
         <scene sceneID="Rnd-1I-spc">
             <objects>
-                <viewController id="o9C-vh-u6v" sceneMemberID="viewController">
+                <viewController id="o9C-vh-u6v" customClass="IntroductionDataController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sUM-Oh-IBp"/>
                         <viewControllerLayoutGuide type="bottom" id="h1E-NR-Lc0"/>
@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="933" y="526"/>
         </scene>
-        <!--Introduction Page Controller View Controller-->
+        <!--Individual Page View Controller View Controller-->
         <scene sceneID="Euo-Tj-YDM">
             <objects>
-                <viewController id="03L-rB-EHG" customClass="IntroductionPageControllerViewController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IndividualController" id="03L-rB-EHG" customClass="IndividualPageViewControllerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="chH-AF-iNw"/>
                         <viewControllerLayoutGuide type="bottom" id="FG6-MX-sY6"/>

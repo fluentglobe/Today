@@ -1,5 +1,5 @@
 //
-//  IntroductionPageControllerViewController.swift
+//  IntroductionViewController.swift
 //  Today
 //
 //  Created by Henrik Vendelbo on 08/07/2015.
@@ -8,7 +8,13 @@
 
 import UIKit
 
-class IntroductionPageViewController: UIViewController {
+class IntroductionViewController: UIPageViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -16,25 +22,14 @@ class IntroductionPageViewController: UIViewController {
     }
     
 
-    // MARK: - Variables
-    var itemIndex: Int = 0
-    var imageName: String = "" {
-        
-        didSet {
-            
-            if let imageView = contentImageView {
-                imageView.image = UIImage(named: imageName)
-            }
-            
-        }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
-    
-    @IBOutlet var contentImageView: UIImageView?
-    
-    // MARK: - View Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        contentImageView!.image = UIImage(named: imageName)
-    }
+    */
 
 }

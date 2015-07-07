@@ -68,7 +68,7 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
     private func getItemController(itemIndex: Int) -> IntroductionPageViewController? {
         
         if itemIndex < contentImages.count {
-            let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("ItemController") as! IntroductionPageViewController
+            let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("IndividualController") as! IntroductionPageViewController
             pageItemController.itemIndex = itemIndex
             pageItemController.imageName = contentImages[itemIndex]
             return pageItemController
