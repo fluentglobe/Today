@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ZurichTheme" translatesAutoresizingMaskIntoConstraints="NO" id="heI-6c-chc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ZurichTheme" translatesAutoresizingMaskIntoConstraints="NO" id="heI-6c-chc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <variation key="widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="20" y="0.0" width="3264" height="2448"/>
@@ -32,13 +32,39 @@
                                     <segue destination="Omd-nH-bIN" kind="embed" id="0cV-g0-nIp"/>
                                 </connections>
                             </containerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="RightToolbar" translatesAutoresizingMaskIntoConstraints="NO" id="1DY-1S-Cfp">
+                                <rect key="frame" x="0.0" y="548" width="77" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4Ip-PR-9nf"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="Plan" style="plain" id="uyS-wW-lRP"/>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="LeftToolbar" translatesAutoresizingMaskIntoConstraints="NO" id="ZJO-3w-iXh">
+                                <rect key="frame" x="547" y="548" width="67" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="wd1-fz-nbo"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="New Message" style="plain" id="cGS-WQ-jsy"/>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="heI-6c-chc" secondAttribute="bottom" id="0br-TA-Q1c"/>
                             <constraint firstItem="Cgw-Cq-cBY" firstAttribute="trailing" secondItem="heI-6c-chc" secondAttribute="trailing" id="9e9-Yy-dNN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZJO-3w-iXh" secondAttribute="trailing" id="FVG-Zb-t8F"/>
                             <constraint firstItem="heI-6c-chc" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="H2f-cc-jRY"/>
+                            <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="ZJO-3w-iXh" secondAttribute="bottom" id="MTr-MA-UkO"/>
+                            <constraint firstItem="heI-6c-chc" firstAttribute="top" secondItem="Cgw-Cq-cBY" secondAttribute="top" id="NjU-Xg-ZCg"/>
+                            <constraint firstItem="1DY-1S-Cfp" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="Pvf-nC-lDu"/>
                             <constraint firstItem="Cgw-Cq-cBY" firstAttribute="top" secondItem="AXf-ix-ToC" secondAttribute="top" id="TUJ-TT-fqg"/>
+                            <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="1DY-1S-Cfp" secondAttribute="bottom" id="UWp-jD-TdA"/>
+                            <constraint firstItem="heI-6c-chc" firstAttribute="bottom" secondItem="eVZ-dN-3IG" secondAttribute="top" id="e1Y-xQ-9XB"/>
                             <constraint firstItem="Cgw-Cq-cBY" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="qWY-rM-2Qr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="heI-6c-chc" secondAttribute="trailing" id="qvT-LO-QRM"/>
                             <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="Cgw-Cq-cBY" secondAttribute="bottom" id="x8g-Zk-ckD"/>
@@ -58,6 +84,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="leftToolbar" destination="1DY-1S-Cfp" id="CEd-fQ-2VQ"/>
+                        <outlet property="rightToolbar" destination="ZJO-3w-iXh" id="jBn-TZ-OMe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSp-Zj-zjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,31 +100,49 @@
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RJj-GT-3ex">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="skO-pr-AOg">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="skO-pr-AOg">
                             <size key="itemSize" width="335" height="305"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="50" height="50"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ExerciseCell" id="KGI-Ps-vZO">
-                                <rect key="frame" x="133" y="0.0" width="335" height="305"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ExercisesCell" id="KGI-Ps-vZO" customClass="ExercisesCollectionViewCell" customModule="Today" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="148" width="335" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="305"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-1H-EBV">
+                                        <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-1H-EBV">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="305"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </webView>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L38-Fi-a2S">
+                                            <rect key="frame" x="95" y="216" width="240" height="128"/>
+                                        </imageView>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HcA-k2-shr">
+                                            <rect key="frame" x="92" y="152" width="150" height="2"/>
+                                        </progressView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcF-xs-Zb7">
+                                            <rect key="frame" x="146" y="142" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <outlet property="nameLabel" destination="FcF-xs-Zb7" id="GOn-KD-u3B"/>
+                                    <outlet property="snapshotImageView" destination="L38-Fi-a2S" id="FXL-yA-lXT"/>
+                                    <outlet property="taskProgress" destination="HcA-k2-shr" id="Sya-nJ-b3W"/>
+                                    <outlet property="webView" destination="Twr-1H-EBV" id="bhj-7T-3Mz"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M1t-Za-WTQ">
-                            <rect key="frame" x="0.0" y="305" width="600" height="50"/>
+                            <rect key="frame" x="335" y="0.0" width="50" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </collectionReusableView>
                         <connections>
@@ -109,6 +157,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="New Message" width="25" height="25"/>
+        <image name="Plan" width="25" height="25"/>
         <image name="ZurichTheme" width="3264" height="2448"/>
     </resources>
 </document>
