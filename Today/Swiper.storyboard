@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cd1-9C-kFu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -24,7 +24,7 @@
                                 </variation>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-Cq-cBY">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
                                 <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="20" y="0.0" width="3264" height="563"/>
                                 </variation>
@@ -38,7 +38,9 @@
                                     <constraint firstAttribute="width" constant="60" id="4Ip-PR-9nf"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem image="Plan" style="plain" id="uyS-wW-lRP"/>
+                                    <barButtonItem image="Plan" style="plain" id="uyS-wW-lRP">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </toolbar>
@@ -48,7 +50,9 @@
                                     <constraint firstAttribute="width" constant="60" id="wd1-fz-nbo"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem image="New Message" style="plain" id="cGS-WQ-jsy"/>
+                                    <barButtonItem image="New Message" style="plain" id="cGS-WQ-jsy">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </toolbar>
@@ -67,7 +71,7 @@
                             <constraint firstItem="heI-6c-chc" firstAttribute="bottom" secondItem="eVZ-dN-3IG" secondAttribute="top" id="e1Y-xQ-9XB"/>
                             <constraint firstItem="Cgw-Cq-cBY" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="qWY-rM-2Qr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="heI-6c-chc" secondAttribute="trailing" id="qvT-LO-QRM"/>
-                            <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="Cgw-Cq-cBY" secondAttribute="bottom" id="x8g-Zk-ckD"/>
+                            <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="Cgw-Cq-cBY" secondAttribute="bottom" constant="50" id="x8g-Zk-ckD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -98,20 +102,15 @@
             <objects>
                 <collectionViewController id="Omd-nH-bIN" customClass="ExercisesViewControllerCollectionViewController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RJj-GT-3ex">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="skO-pr-AOg">
-                            <size key="itemSize" width="335" height="305"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="50" height="50"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
+                        <collectionViewLayout key="collectionViewLayout" id="6ys-ZH-VSa" customClass="TodayExercisesViewLayout" customModule="Today" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ExercisesCell" id="KGI-Ps-vZO" customClass="ExercisesCollectionViewCell" customModule="Today" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="148" width="335" height="305"/>
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="305"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-1H-EBV">
@@ -120,14 +119,16 @@
                                         </webView>
                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L38-Fi-a2S">
                                             <rect key="frame" x="95" y="216" width="240" height="128"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         </imageView>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HcA-k2-shr">
                                             <rect key="frame" x="92" y="152" width="150" height="2"/>
+                                            <color key="progressTintColor" cocoaTouchSystemColor="lightTextColor"/>
                                         </progressView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcF-xs-Zb7">
                                             <rect key="frame" x="146" y="142" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -141,10 +142,6 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M1t-Za-WTQ">
-                            <rect key="frame" x="335" y="0.0" width="50" height="600"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Omd-nH-bIN" id="xoJ-qE-MyI"/>
                             <outlet property="delegate" destination="Omd-nH-bIN" id="erB-fh-yWX"/>
