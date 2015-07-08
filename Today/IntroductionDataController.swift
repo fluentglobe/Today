@@ -45,7 +45,7 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        let itemController = viewController as! IntroductionPageViewController
+        let itemController = viewController as! IndividualPageViewController
         
         if itemController.itemIndex > 0 {
             return getItemController(itemController.itemIndex-1)
@@ -56,7 +56,7 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        let itemController = viewController as! IntroductionPageViewController
+        let itemController = viewController as! IndividualPageViewController
         
         if itemController.itemIndex+1 < contentImages.count {
             return getItemController(itemController.itemIndex+1)
@@ -65,10 +65,10 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
         return nil
     }
     
-    private func getItemController(itemIndex: Int) -> IntroductionPageViewController? {
+    private func getItemController(itemIndex: Int) -> IndividualPageViewController? {
         
         if itemIndex < contentImages.count {
-            let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("IndividualController") as! IntroductionPageViewController
+            let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("IndividualController") as! IndividualPageViewController
             pageItemController.itemIndex = itemIndex
             pageItemController.imageName = contentImages[itemIndex]
             return pageItemController

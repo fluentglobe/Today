@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroductionViewController: UIPageViewController {
+class IntroductionPageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,4 +32,25 @@ class IntroductionViewController: UIPageViewController {
     }
     */
 
+    //TODO ken burns panning on active page image
+    // http://stackoverflow.com/questions/5125862/ios-ken-burns-animation-implementation-requires-unexpected-parameters
+    /*
+    - (void)one {
+    image.frame = // some frame that zooms in on the image;
+    image.center = // tip of the nose
+    
+    [self performSelector:@selector(two) withObject:nil afterDelay:0];
+    }
+    
+    - (void)two {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:3];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    
+    image.frame = // original frame
+    image.center = // original centerpoint
+    
+    [UIView commitAnimations];
+    }
+    */
 }

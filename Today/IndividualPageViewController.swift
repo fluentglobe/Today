@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroductionPageViewController: UIViewController {
+class IndividualPageViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
