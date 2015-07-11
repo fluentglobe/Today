@@ -28,8 +28,16 @@ class IndividualPageViewController: UIViewController {
             
         }
     }
+    var line1: String = "" {
+        didSet {
+            if let l1 = labelLine1 {
+                l1.text = line1
+            }
+        }
+    }
     
     @IBOutlet var contentImageView: UIImageView?
+    @IBOutlet var labelLine1: UILabel?
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {

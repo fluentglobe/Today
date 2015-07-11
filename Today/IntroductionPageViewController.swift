@@ -14,13 +14,31 @@ class IntroductionPageViewController: UIPageViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+//        self.navigationController!.navigationBar.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    override func viewDidLayoutSubviews() {
+        var controlsHeight:CGFloat = 40.0
+
+        for subview in self.view.subviews {
+            if subview is UIPageControl {
+                controlsHeight = subview.frame.size.height
+                self.view.bringSubviewToFront(subview)
+            } else if let scrollview = subview as? UIScrollView {
+                scrollview.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+                subview.frame = self.view.bounds
+            }
+        }
+        //        pageViewController!.view.frame = CGRectMake(0, 0, pageViewController!.view.frame.size.width, pageViewController!.view.frame.size.height + controlsHeight)
+
+        super.viewDidLayoutSubviews()
+    }
 
     /*
     // MARK: - Navigation

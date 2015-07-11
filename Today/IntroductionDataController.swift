@@ -32,13 +32,18 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
         addChildViewController(pageViewController!)
         self.view.addSubview(pageViewController!.view)
         pageViewController!.didMoveToParentViewController(self)
+        
+//        self.navigationController!.navigationBar.hidden = true
+        
+    
     }
     
     private func setupPageControl() {
         let appearance = UIPageControl.appearance()
         appearance.pageIndicatorTintColor = UIColor.grayColor()
         appearance.currentPageIndicatorTintColor = UIColor.whiteColor()
-        appearance.backgroundColor = UIColor.darkGrayColor()
+        appearance.backgroundColor = UIColor.clearColor()
+        
     }
     
     // MARK: - UIPageViewControllerDataSource
@@ -65,12 +70,23 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
         return nil
     }
     
+    struct ItemDesc {
+        var image : String;
+        var line1 : String;
+        
+        init(image i: String,line1 one:String) {
+            image = i
+            line1 = one
+        }
+    }
+    
     private func getItemController(itemIndex: Int) -> IndividualPageViewController? {
         
         if itemIndex < contentImages.count {
             let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("IndividualController") as! IndividualPageViewController
             pageItemController.itemIndex = itemIndex
-            pageItemController.imageName = contentImages[itemIndex]
+            pageItemController.imageName = contentImages[itemIndex].image
+            pageItemController.line1 = contentImages[itemIndex].line1
             return pageItemController
         }
         
@@ -82,10 +98,18 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
     
     // Initialize it right away here
     private let contentImages = [
-        "Umzug.png",
-        "Barbie.png",
-        "Bergzug.png"];
+        ItemDesc(image:"Umzug.png",line1:"Learn the Local language one hour every day"),
+        ItemDesc(image:"Barbie.png",line1:"Interactive exercises make the phrases you learn stick"),
+        ItemDesc(image:"Bergzug.png",line1:"Lessons are tailored to your progress")
+    ];
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     // MARK: - Page Indicator
     
