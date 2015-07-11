@@ -28,6 +28,7 @@
 		CF15BB761B4C8F770015AE27 /* IntroductionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB751B4C8F770015AE27 /* IntroductionPageViewController.swift */; };
 		CF15BB781B4C924E0015AE27 /* IndividualPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB771B4C924E0015AE27 /* IndividualPageViewController.swift */; };
 		CF15BB7A1B4C940C0015AE27 /* IntroductionDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB791B4C940C0015AE27 /* IntroductionDataController.swift */; };
+		CF8CCDA11B51534B007F24C9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8CCDA01B51534B007F24C9 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		CF15BB751B4C8F770015AE27 /* IntroductionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPageViewController.swift; sourceTree = "<group>"; };
 		CF15BB771B4C924E0015AE27 /* IndividualPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualPageViewController.swift; sourceTree = "<group>"; };
 		CF15BB791B4C940C0015AE27 /* IntroductionDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionDataController.swift; sourceTree = "<group>"; };
+		CF8CCDA01B51534B007F24C9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		CF15BB2C1B47E7590015AE27 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				CF8CCD9F1B5152F8007F24C9 /* Login */,
 				CF15BB741B4C8F400015AE27 /* Introduction */,
 				CF15BB2D1B47E7590015AE27 /* AppDelegate.swift */,
 				CF15BB6C1B48430E0015AE27 /* ExercisesDataSource.swift */,
@@ -175,6 +178,14 @@
 				CF15BB791B4C940C0015AE27 /* IntroductionDataController.swift */,
 			);
 			name = Introduction;
+			sourceTree = "<group>";
+		};
+		CF8CCD9F1B5152F8007F24C9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CF8CCDA01B51534B007F24C9 /* Login.storyboard */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 			files = (
 				CF15BB731B4C8E940015AE27 /* Introduction.storyboard in Resources */,
 				CF15BB3A1B47E7590015AE27 /* LaunchScreen.storyboard in Resources */,
+				CF8CCDA11B51534B007F24C9 /* Login.storyboard in Resources */,
 				CF15BB371B47E7590015AE27 /* Assets.xcassets in Resources */,
 				CF15BB601B4817D20015AE27 /* Swiper.storyboard in Resources */,
 				CF15BB351B47E7590015AE27 /* Tabbed.storyboard in Resources */,
@@ -469,12 +481,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Today/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fluentglobe.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Today/Today-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -485,11 +498,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Today/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fluentglobe.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Today/Today-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -8,35 +8,47 @@
 
 import UIKit
 
-class IntroductionDataController: UIViewController, UIPageViewControllerDataSource {
+class IntroductionDataController: UINavigationController, UIPageViewControllerDataSource {
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        createPageViewController()
+        navigationBar.translucent = true
+        navigationBar.hidden = true
+        navigationBar.backgroundColor = UIColor.clearColor()
+        
+//        createPageViewController()
         setupPageControl()
     }
     
-    private func createPageViewController() {
-        
-        let pageController = self.storyboard!.instantiateViewControllerWithIdentifier("PageController") as! UIPageViewController
-        pageController.dataSource = self
-        
-        if contentImages.count > 0 {
-            let firstController = getItemController(0)!
-            let startingViewControllers: NSArray = [firstController]
-            pageController.setViewControllers(startingViewControllers as! [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+    override func viewDidLayoutSubviews() {
+        for subview in self.view.subviews {
+            if subview is UIPageControl {
+//                controlsHeight = subview.frame.size.height
+                self.view.bringSubviewToFront(subview)
+            } else if let scrollview = subview as? UIScrollView {
+                scrollview.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+                subview.frame = self.view.bounds
+            }
         }
-        
-        pageViewController = pageController
-        addChildViewController(pageViewController!)
-        self.view.addSubview(pageViewController!.view)
-        pageViewController!.didMoveToParentViewController(self)
-        
-//        self.navigationController!.navigationBar.hidden = true
-        
-    
+
     }
+    
+    /*
+    private func createPageViewController() {
+        if let firstController = viewControllers[0] {
+            let pageController = firstController as! UIPageViewController
+            
+            if contentImages.count > 0 {
+                let firstController = getItemController(0)!
+                let startingViewControllers: NSArray = [firstController]
+                pageController.setViewControllers(startingViewControllers as! [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+            }
+            
+//            self.view.addSubview(pageViewController!.view)
+        }
+    }
+    */
     
     private func setupPageControl() {
         let appearance = UIPageControl.appearance()
@@ -94,7 +106,6 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
     }
     
     // MARK: - Variables
-    private var pageViewController: UIPageViewController?
     
     // Initialize it right away here
     private let contentImages = [
@@ -106,10 +117,10 @@ class IntroductionDataController: UIViewController, UIPageViewControllerDataSour
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+
+//    override func prefersStatusBarHidden() -> Bool {
+//        return true
+//    }
     
     // MARK: - Page Indicator
     

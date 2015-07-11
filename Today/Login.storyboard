@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vhv-tn-YEl">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7YH-Ea-r11">
+            <objects>
+                <viewController id="hfS-6Z-A2h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qB2-qQ-8G5"/>
+                        <viewControllerLayoutGuide type="bottom" id="E6h-YV-xbs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pAN-xl-Auw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bergzug" translatesAutoresizingMaskIntoConstraints="NO" id="f0l-ph-utV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ggt-hl-SO4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wex-Fi-3F3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="537"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MnJ-F3-cyv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vhv-tn-YEl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BP3-mX-zQk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hfS-6Z-A2h" kind="relationship" relationship="rootViewController" id="O0r-Fl-0zh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOs-7K-S6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205" y="537"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bergzug" width="880" height="576"/>
+    </resources>
+</document>

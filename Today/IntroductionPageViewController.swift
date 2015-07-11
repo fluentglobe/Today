@@ -14,8 +14,18 @@ class IntroductionPageViewController: UIPageViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        edgesForExtendedLayout = UIRectEdge.None
         
 //        self.navigationController!.navigationBar.hidden = true
+        
+        if let ds = navigationController as! UIPageViewControllerDataSource? {
+            dataSource = ds
+        }
+        
+        let startingViewController = storyboard!.instantiateViewControllerWithIdentifier("IndividualController") as UIViewController
+        
+        setViewControllers([startingViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +43,9 @@ class IntroductionPageViewController: UIPageViewController {
             } else if let scrollview = subview as? UIScrollView {
                 scrollview.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
                 subview.frame = self.view.bounds
+//            } else if let imageview = subview as? UIImageView {
+//                imageview.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+//                subview.frame = self.view.bounds
             }
         }
         //        pageViewController!.view.frame = CGRectMake(0, 0, pageViewController!.view.frame.size.width, pageViewController!.view.frame.size.height + controlsHeight)
