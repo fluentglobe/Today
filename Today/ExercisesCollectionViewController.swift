@@ -8,9 +8,9 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
-class ExercisesViewControllerCollectionViewController: UICollectionViewController {
+class ExercisesCollectionViewController: UICollectionViewController {
+    
+    let reuseIdentifier = "ExercisesCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,26 +42,6 @@ class ExercisesViewControllerCollectionViewController: UICollectionViewControlle
     }
     */
 
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
-    }
-
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-    
-        // Configure the cell
-    
-        return cell
-    }
     
     // Layout
     
@@ -74,6 +54,7 @@ class ExercisesViewControllerCollectionViewController: UICollectionViewControlle
         super.init(coder: aDecoder)
     }
 
+    
     // MARK: UICollectionViewDelegate
 
     /*

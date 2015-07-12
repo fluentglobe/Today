@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak private var leftToolbar: UIToolbar?;
     @IBOutlet weak private var rightToolbar: UIToolbar?;
+    
+    var dataSource = ExercisesDataSource()
 
     // for now, consider matching with background image
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

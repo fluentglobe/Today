@@ -54,12 +54,18 @@ class ExercisesDataSource: NSObject, UICollectionViewDataSource, UICollectionVie
 
     lazy var exercises = exercisesDefs()
     
+    
+    func exercisesTodayCount() -> Int {
+        //TODO based on datasource
+        return 4
+    }
+
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.exercises.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ExerciseCell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ExercisesCell", forIndexPath: indexPath) as UICollectionViewCell
         if let cardCell = cell as? ExercisesCollectionViewCell {
             if let card = self.exercises[indexPath.item] as? ExerciseDescription {
                 cardCell.title = card.title + " (\(indexPath.item))"

@@ -20,6 +20,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bergzug" translatesAutoresizingMaskIntoConstraints="NO" id="f0l-ph-utV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuW-B2-zTy">
+                                <rect key="frame" x="85" y="511" width="42" height="30"/>
+                                <state key="normal" title="Today"/>
+                                <connections>
+                                    <segue destination="lE1-VB-Mk2" kind="presentation" modalTransitionStyle="flipHorizontal" id="btW-KG-0XE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -28,6 +35,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wex-Fi-3F3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1223" y="537"/>
+        </scene>
+        <!--Swiper-->
+        <scene sceneID="zvX-V9-fwZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Swiper" id="lE1-VB-Mk2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbs-nL-2Dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="988"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MnJ-F3-cyv">

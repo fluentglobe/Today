@@ -17,7 +17,7 @@
 		CF15BB501B47E7590015AE27 /* TodayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB4F1B47E7590015AE27 /* TodayUITests.swift */; };
 		CF15BB601B4817D20015AE27 /* Swiper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF15BB5F1B4817D20015AE27 /* Swiper.storyboard */; };
 		CF15BB621B4832E50015AE27 /* ExercisesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB611B4832E50015AE27 /* ExercisesCollectionViewCell.swift */; };
-		CF15BB641B483C2C0015AE27 /* ExercisesViewControllerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB631B483C2C0015AE27 /* ExercisesViewControllerCollectionViewController.swift */; };
+		CF15BB641B483C2C0015AE27 /* ExercisesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB631B483C2C0015AE27 /* ExercisesCollectionViewController.swift */; };
 		CF15BB661B483C930015AE27 /* TodayExercisesViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB651B483C930015AE27 /* TodayExercisesViewLayout.swift */; };
 		CF15BB681B483CAC0015AE27 /* PlanExercisesViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB671B483CAC0015AE27 /* PlanExercisesViewLayout.swift */; };
 		CF15BB6B1B48428E0015AE27 /* ExercisesURLCache.swift-old in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB6A1B48428E0015AE27 /* ExercisesURLCache.swift-old */; };
@@ -65,7 +65,7 @@
 		CF15BB511B47E7590015AE27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF15BB5F1B4817D20015AE27 /* Swiper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Swiper.storyboard; sourceTree = "<group>"; };
 		CF15BB611B4832E50015AE27 /* ExercisesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesCollectionViewCell.swift; sourceTree = "<group>"; };
-		CF15BB631B483C2C0015AE27 /* ExercisesViewControllerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesViewControllerCollectionViewController.swift; sourceTree = "<group>"; };
+		CF15BB631B483C2C0015AE27 /* ExercisesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesCollectionViewController.swift; sourceTree = "<group>"; };
 		CF15BB651B483C930015AE27 /* TodayExercisesViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayExercisesViewLayout.swift; sourceTree = "<group>"; };
 		CF15BB671B483CAC0015AE27 /* PlanExercisesViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanExercisesViewLayout.swift; sourceTree = "<group>"; };
 		CF15BB691B48428D0015AE27 /* Today-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Today-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -128,25 +128,19 @@
 		CF15BB2C1B47E7590015AE27 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				CF8CCDA21B52CCDB007F24C9 /* Exercises */,
 				CF8CCD9F1B5152F8007F24C9 /* Login */,
 				CF15BB741B4C8F400015AE27 /* Introduction */,
 				CF15BB2D1B47E7590015AE27 /* AppDelegate.swift */,
-				CF15BB6C1B48430E0015AE27 /* ExercisesDataSource.swift */,
 				CF15BB6A1B48428E0015AE27 /* ExercisesURLCache.swift-old */,
+				CF15BB6E1B4861910015AE27 /* MainViewController.swift */,
 				CF15BB2F1B47E7590015AE27 /* TodayViewController.swift */,
 				CF15BB311B47E7590015AE27 /* SecondViewController.swift */,
 				CF15BB331B47E7590015AE27 /* Tabbed.storyboard */,
-				CF15BB5F1B4817D20015AE27 /* Swiper.storyboard */,
-				CF15BB6E1B4861910015AE27 /* MainViewController.swift */,
-				CF15BB631B483C2C0015AE27 /* ExercisesViewControllerCollectionViewController.swift */,
 				CF15BB361B47E7590015AE27 /* Assets.xcassets */,
 				CF15BB381B47E7590015AE27 /* LaunchScreen.storyboard */,
 				CF15BB3B1B47E7590015AE27 /* Info.plist */,
-				CF15BB611B4832E50015AE27 /* ExercisesCollectionViewCell.swift */,
-				CF15BB651B483C930015AE27 /* TodayExercisesViewLayout.swift */,
-				CF15BB671B483CAC0015AE27 /* PlanExercisesViewLayout.swift */,
 				CF15BB691B48428D0015AE27 /* Today-Bridging-Header.h */,
-				CF15BB701B4BACFD0015AE27 /* ExercisesViewLayoutAttributes.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -186,6 +180,20 @@
 				CF8CCDA01B51534B007F24C9 /* Login.storyboard */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		CF8CCDA21B52CCDB007F24C9 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				CF15BB651B483C930015AE27 /* TodayExercisesViewLayout.swift */,
+				CF15BB671B483CAC0015AE27 /* PlanExercisesViewLayout.swift */,
+				CF15BB6C1B48430E0015AE27 /* ExercisesDataSource.swift */,
+				CF15BB631B483C2C0015AE27 /* ExercisesCollectionViewController.swift */,
+				CF15BB5F1B4817D20015AE27 /* Swiper.storyboard */,
+				CF15BB611B4832E50015AE27 /* ExercisesCollectionViewCell.swift */,
+				CF15BB701B4BACFD0015AE27 /* ExercisesViewLayoutAttributes.swift */,
+			);
+			name = Exercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +343,7 @@
 				CF15BB621B4832E50015AE27 /* ExercisesCollectionViewCell.swift in Sources */,
 				CF15BB681B483CAC0015AE27 /* PlanExercisesViewLayout.swift in Sources */,
 				CF15BB301B47E7590015AE27 /* TodayViewController.swift in Sources */,
-				CF15BB641B483C2C0015AE27 /* ExercisesViewControllerCollectionViewController.swift in Sources */,
+				CF15BB641B483C2C0015AE27 /* ExercisesCollectionViewController.swift in Sources */,
 				CF15BB6F1B4861910015AE27 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
