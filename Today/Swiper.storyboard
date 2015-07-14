@@ -107,20 +107,21 @@
         <scene sceneID="0dC-3b-y7c">
             <objects>
                 <collectionViewController id="Omd-nH-bIN" customClass="ExercisesCollectionViewController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RJj-GT-3ex">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="RJj-GT-3ex">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <collectionViewLayout key="collectionViewLayout" id="6ys-ZH-VSa" customClass="TodayExercisesViewLayout" customModule="Today" customModuleProvider="target"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="SAL-2K-IXS" customClass="TodayExercisesViewLayout" customModule="Today" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ExercisesCell" id="KGI-Ps-vZO" customClass="ExercisesCollectionViewCell" customModule="Today" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ExercisesCell" reuseIdentifier="ExercisesCell" id="KGI-Ps-vZO" customClass="ExercisesCollectionViewCell" customModule="Today" customModuleProvider="target">
                                 <rect key="frame" x="14" y="0.0" width="292" height="380"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="292" height="380"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L38-Fi-a2S">
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L38-Fi-a2S">
                                             <rect key="frame" x="95" y="216" width="240" height="128"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
@@ -130,9 +131,12 @@
                                             <animations/>
                                             <color key="progressTintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         </progressView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcF-xs-Zb7">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcF-xs-Zb7">
                                             <rect key="frame" x="24" y="311" width="42" height="21"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="Hov-j6-XiK"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -147,6 +151,12 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <color key="backgroundColor" red="1" green="0.10990653190000001" blue="0.1810796261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FcF-xs-Zb7" firstAttribute="centerX" secondItem="KGI-Ps-vZO" secondAttribute="centerX" id="CbD-4H-VkS"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="FcF-xs-Zb7" secondAttribute="bottom" constant="40" id="GNk-K3-pSo"/>
+                                    <constraint firstItem="L38-Fi-a2S" firstAttribute="leading" secondItem="FcF-xs-Zb7" secondAttribute="trailing" constant="29" id="a9b-c1-VVm"/>
+                                </constraints>
                                 <size key="customSize" width="292" height="380"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="FcF-xs-Zb7" id="GOn-KD-u3B"/>

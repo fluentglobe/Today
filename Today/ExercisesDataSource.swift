@@ -19,6 +19,7 @@ class ExerciseDescription {
     
     var html:String? = HTML_BEGIN + HTML_ONE_PLACE + HTML_SCAN_BARCODE + HTML_END
     var url:NSURL? = nil
+    var imageName = "Barbie"
     
     init() {
     }
@@ -57,7 +58,7 @@ class ExercisesDataSource: NSObject, UICollectionViewDataSource, UICollectionVie
     
     func exercisesTodayCount() -> Int {
         //TODO based on datasource
-        return 4
+        return exercises.count
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -65,13 +66,17 @@ class ExercisesDataSource: NSObject, UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ExercisesCell", forIndexPath: indexPath) as UICollectionViewCell
-        if let cardCell = cell as? ExercisesCollectionViewCell {
-            if let card = self.exercises[indexPath.item] as? ExerciseDescription {
-                cardCell.title = card.title + " (\(indexPath.item))"
-                cardCell.progress = card.progress
-                cardCell.color = UIColor.whiteColor()
-                cardCell.setHTML(card)
+        let desc = self.exercises[indexPath.item]
+        
+        if let exercise = cell as? ExercisesCollectionViewCell {
+            if let edesc = desc as? ExerciseDescription {
+                exercise.title = edesc.title + " (\(indexPath.item))"
+                exercise.progress = edesc.progress
+                exercise.color = UIColor.whiteColor()
+                exercise.setHTML(edesc)
+                exercise.setImagePath(edesc.imageName)
             }
         }
         

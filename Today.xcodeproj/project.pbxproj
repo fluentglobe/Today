@@ -29,6 +29,7 @@
 		CF15BB781B4C924E0015AE27 /* IndividualPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB771B4C924E0015AE27 /* IndividualPageViewController.swift */; };
 		CF15BB7A1B4C940C0015AE27 /* IntroductionDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF15BB791B4C940C0015AE27 /* IntroductionDataController.swift */; };
 		CF8CCDA11B51534B007F24C9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8CCDA01B51534B007F24C9 /* Login.storyboard */; };
+		CF8CCDA41B55B644007F24C9 /* TodayFlowViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CCDA31B55B644007F24C9 /* TodayFlowViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		CF15BB771B4C924E0015AE27 /* IndividualPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualPageViewController.swift; sourceTree = "<group>"; };
 		CF15BB791B4C940C0015AE27 /* IntroductionDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionDataController.swift; sourceTree = "<group>"; };
 		CF8CCDA01B51534B007F24C9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CF8CCDA31B55B644007F24C9 /* TodayFlowViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayFlowViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				CF15BB5F1B4817D20015AE27 /* Swiper.storyboard */,
 				CF15BB611B4832E50015AE27 /* ExercisesCollectionViewCell.swift */,
 				CF15BB701B4BACFD0015AE27 /* ExercisesViewLayoutAttributes.swift */,
+				CF8CCDA31B55B644007F24C9 /* TodayFlowViewLayout.swift */,
 			);
 			name = Exercises;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				CF15BB661B483C930015AE27 /* TodayExercisesViewLayout.swift in Sources */,
 				CF15BB621B4832E50015AE27 /* ExercisesCollectionViewCell.swift in Sources */,
 				CF15BB681B483CAC0015AE27 /* PlanExercisesViewLayout.swift in Sources */,
+				CF8CCDA41B55B644007F24C9 /* TodayFlowViewLayout.swift in Sources */,
 				CF15BB301B47E7590015AE27 /* TodayViewController.swift in Sources */,
 				CF15BB641B483C2C0015AE27 /* ExercisesCollectionViewController.swift in Sources */,
 				CF15BB6F1B4861910015AE27 /* MainViewController.swift in Sources */,

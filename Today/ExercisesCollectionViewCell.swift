@@ -151,10 +151,12 @@ class ExercisesCollectionViewCell: UICollectionViewCell, UIWebViewDelegate {
         //TODO other snapshot bits
     }
     
-    /*
-    func setImage(image:UIImage) {
-    //        self.imageView.setImage(image)
+    func setImagePath(name:String) {
+        snapshotImageView?.image = UIImage(named: name) 
+        //        self.imageView.setImage(image)
     }
+
+    /*
     
     func setLabel(text: String) {
     self.nameLabel.text = text

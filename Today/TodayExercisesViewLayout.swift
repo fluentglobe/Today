@@ -75,7 +75,7 @@ class TodayExercisesViewLayout: UICollectionViewLayout {
     
     func prepareAttributes() {
         var forAll = [UICollectionViewLayoutAttributes](),
-            startCenterX = 0,
+            startCenterX = center.x,
             centerX = CGFloat(startCenterX),
             incWidth = collectionView!.bounds.size.width
         
