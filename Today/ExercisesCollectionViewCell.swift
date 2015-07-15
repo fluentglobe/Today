@@ -43,10 +43,15 @@ class ExercisesCollectionViewCell: UICollectionViewCell, UIWebViewDelegate {
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
+        initConstraints()
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        initConstraints()
+    }
+    
+    func initConstraints() {
         
         self.backgroundView = UIView(frame: CGRectMake(0,0,100,100))
         //TODO rect full size constraints
@@ -69,6 +74,14 @@ class ExercisesCollectionViewCell: UICollectionViewCell, UIWebViewDelegate {
 //        self.backgroundView.layer.shadowRadius = CGFloat(4.0)
 //        self.backgroundView.layer.shadowOffset = CGSizeMake(CGFloat(0.0), CGFloat(-10.0))
 //        self.backgroundView.layer.shadowPath = UIBezierPath(rect: self.backgroundView.bounds).CGPath
+        
+//        var scrollview = self.superview.scrollView
+//        var constraints = NSMutableArray()
+//        constraints.addObject( NSLayoutConstraint(
+//            item: snapshotImageView, attribute: <#T##NSLayoutAttribute#>, relatedBy: NSLayoutRelation.Equal,
+//            toItem: scrollview, attribute: NSLayoutAttribute.Leading, multiplier: 1, constant: 0) )
+//        
+//        superview.addConstraints(constraints)
     }
     
     func setHTML(desc: ExerciseDescription) {

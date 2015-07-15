@@ -39,13 +39,13 @@ class ExerciseDescription {
 
 func exercisesDefs() -> NSMutableArray {
     let exercises:NSArray = [
-        ExerciseDescription("Introduction", 0, url:"http://fluentglobe.com/zurich/book-intro.html"),
-        ExerciseDescription("Day of the week", 0.1, url: "http://fluentglobe.com/book/exercise.html"),
-        ExerciseDescription("Supermarket Counter",0.2, url: "http://fluentglobe.com/book/exercise.html"),
-        ExerciseDescription("Numbers Bingo",0.3, url: "http://fluentglobe.com/book/exercise.html"),
-        ExerciseDescription("Weekend Visit Story",0.4, url: "http://fluentglobe.com/book/exercise.html"),
-        ExerciseDescription("Complete the Dialog",0.5, url: "http://fluentglobe.com/book/exercise.html"),
-        ExerciseDescription("Speak the Pictures",0.6, url: "http://fluentglobe.com/book/exercise.html"),
+        ExerciseDescription("Introduction", 0, url:"https://api.fluentglobe.com/zurich/book-intro.html"),
+        ExerciseDescription("Day of the week", 0.1, url: "https://api.fluentglobe.com/book/exercise.html"),
+        ExerciseDescription("Supermarket Counter",0.2, url: "https://api.fluentglobe.com/book/exercise.html"),
+        ExerciseDescription("Numbers Bingo",0.3, url: "https://api.fluentglobe.com/book/exercise.html"),
+        ExerciseDescription("Weekend Visit Story",0.4, url: "https://api.fluentglobe.com/book/exercise.html"),
+        ExerciseDescription("Complete the Dialog",0.5, url: "https://api.fluentglobe.com/book/exercise.html"),
+        ExerciseDescription("Speak the Pictures",0.6, url: "https://api.fluentglobe.com/book/exercise.html"),
     ]
     return NSMutableArray(array: exercises)
 }

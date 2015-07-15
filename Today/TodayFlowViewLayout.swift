@@ -16,7 +16,6 @@ class TodayFlowViewLayout: UICollectionViewFlowLayout {
         
         // exercise sizing
         let viewSize = collectionView!.bounds.size
-        itemSize = CGSize(width: viewSize.width, height: viewSize.height)
-        estimatedItemSize = itemSize
+        estimatedItemSize = CGSize(width: viewSize.width, height: viewSize.height)
     }
 }
