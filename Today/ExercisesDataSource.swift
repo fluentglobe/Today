@@ -71,6 +71,7 @@ class ExercisesDataSource: NSObject, UICollectionViewDataSource, UICollectionVie
         let desc = self.exercises[indexPath.item]
         
         if let exercise = cell as? ExercisesCollectionViewCell {
+            exercise.initConstraints()
             if let edesc = desc as? ExerciseDescription {
                 exercise.title = edesc.title + " (\(indexPath.item))"
                 exercise.progress = edesc.progress

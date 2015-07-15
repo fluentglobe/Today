@@ -43,45 +43,51 @@ class ExercisesCollectionViewCell: UICollectionViewCell, UIWebViewDelegate {
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
-        initConstraints()
+        initSubviews()
+//        initConstraints()
     }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initConstraints()
+        initSubviews()
+//        initConstraints()
     }
     
-    func initConstraints() {
-        
+    func initSubviews() {
         self.backgroundView = UIView(frame: CGRectMake(0,0,100,100))
         //TODO rect full size constraints
         self.selectedBackgroundView = UIView(frame: CGRectMake(0,0,100,100))
         //TODO rect full size constraints
         
         self.backgroundView!.backgroundColor = UIColor.clearColor() //self.color
-//        self.backgroundView.layer.cornerRadius = CGFloat(self.cardCornerRadius)
+        //        self.backgroundView.layer.cornerRadius = CGFloat(self.cardCornerRadius)
         //                self.backgroundView.layer.borderWidth = 1.0
         //                self.backgroundView.layer.borderColor = UIColor.blackColor().CGColor
         
         self.selectedBackgroundView!.backgroundColor = UIColor.clearColor() //self.color
-//        self.selectedBackgroundView.layer.cornerRadius = CGFloat(self.cardCornerRadius)
+        //        self.selectedBackgroundView.layer.cornerRadius = CGFloat(self.cardCornerRadius)
         //        self.selectedBackgroundView.layer.borderWidth = 1.0
         //        self.selectedBackgroundView.layer.borderColor = UIColor.blackColor().CGColor
         
-//        self.backgroundView.clipsToBounds = false
-//        self.backgroundView.layer.shadowColor = UIColor.grayColor().CGColor
-//        self.backgroundView.layer.shadowOpacity = Float(0.7)
-//        self.backgroundView.layer.shadowRadius = CGFloat(4.0)
-//        self.backgroundView.layer.shadowOffset = CGSizeMake(CGFloat(0.0), CGFloat(-10.0))
-//        self.backgroundView.layer.shadowPath = UIBezierPath(rect: self.backgroundView.bounds).CGPath
+        //        self.backgroundView.clipsToBounds = false
+        //        self.backgroundView.layer.shadowColor = UIColor.grayColor().CGColor
+        //        self.backgroundView.layer.shadowOpacity = Float(0.7)
+        //        self.backgroundView.layer.shadowRadius = CGFloat(4.0)
+        //        self.backgroundView.layer.shadowOffset = CGSizeMake(CGFloat(0.0), CGFloat(-10.0))
+        //        self.backgroundView.layer.shadowPath = UIBezierPath(rect: self.backgroundView.bounds).CGPath
+    }
+    
+    func initConstraints() {
+        // self.contentView
         
-//        var scrollview = self.superview.scrollView
-//        var constraints = NSMutableArray()
-//        constraints.addObject( NSLayoutConstraint(
-//            item: snapshotImageView, attribute: <#T##NSLayoutAttribute#>, relatedBy: NSLayoutRelation.Equal,
-//            toItem: scrollview, attribute: NSLayoutAttribute.Leading, multiplier: 1, constant: 0) )
-//        
-//        superview.addConstraints(constraints)
+        addConstraints([
+            NSLayoutConstraint(item: self, attribute: .Leading, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Leading, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: self, attribute: .Trailing, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Trailing, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: self, attribute: .Top, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Top, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Bottom, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: taskProgress, attribute: .Bottom, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: nameLabel, attribute: .Bottom, multiplier: 1, constant: 0)
+            ])
     }
     
     func setHTML(desc: ExerciseDescription) {
@@ -101,6 +107,8 @@ class ExercisesCollectionViewCell: UICollectionViewCell, UIWebViewDelegate {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        initConstraints()
         
         self.opaque = false
         self.backgroundColor = UIColor.clearColor()

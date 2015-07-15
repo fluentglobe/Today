@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cd1-9C-kFu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cd1-9C-kFu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -50,7 +50,7 @@
                                 </items>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-Cq-cBY">
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-Cq-cBY">
                                 <rect key="frame" x="16" y="28" width="288" height="417"/>
                                 <animations/>
                                 <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
@@ -65,16 +65,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="heI-6c-chc" secondAttribute="bottom" id="0br-TA-Q1c"/>
-                            <constraint firstItem="Cgw-Cq-cBY" firstAttribute="trailing" secondItem="heI-6c-chc" secondAttribute="trailing" id="9e9-Yy-dNN"/>
                             <constraint firstItem="heI-6c-chc" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="H2f-cc-jRY"/>
                             <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="ZJO-3w-iXh" secondAttribute="bottom" id="MTr-MA-UkO"/>
                             <constraint firstItem="heI-6c-chc" firstAttribute="top" secondItem="Cgw-Cq-cBY" secondAttribute="top" id="NjU-Xg-ZCg"/>
                             <constraint firstItem="1DY-1S-Cfp" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="Pvf-nC-lDu"/>
-                            <constraint firstItem="Cgw-Cq-cBY" firstAttribute="top" secondItem="AXf-ix-ToC" secondAttribute="top" id="TUJ-TT-fqg"/>
                             <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="1DY-1S-Cfp" secondAttribute="bottom" id="UWp-jD-TdA"/>
                             <constraint firstAttribute="trailing" secondItem="ZJO-3w-iXh" secondAttribute="trailing" id="V9y-o0-z3p"/>
                             <constraint firstItem="heI-6c-chc" firstAttribute="bottom" secondItem="eVZ-dN-3IG" secondAttribute="top" id="e1Y-xQ-9XB"/>
-                            <constraint firstItem="Cgw-Cq-cBY" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="qWY-rM-2Qr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="heI-6c-chc" secondAttribute="trailing" id="qvT-LO-QRM"/>
                             <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="Cgw-Cq-cBY" secondAttribute="bottom" constant="50" id="x8g-Zk-ckD"/>
                         </constraints>
@@ -86,9 +83,6 @@
                         <variation key="widthClass=regular">
                             <mask key="constraints">
                                 <include reference="0br-TA-Q1c"/>
-                                <exclude reference="9e9-Yy-dNN"/>
-                                <exclude reference="TUJ-TT-fqg"/>
-                                <exclude reference="qWY-rM-2Qr"/>
                                 <exclude reference="x8g-Zk-ckD"/>
                             </mask>
                         </variation>
@@ -115,24 +109,29 @@
                         <collectionViewLayout key="collectionViewLayout" id="SAL-2K-IXS" customClass="TodayExercisesViewLayout" customModule="Today" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ExercisesCell" reuseIdentifier="ExercisesCell" id="KGI-Ps-vZO" customClass="ExercisesCollectionViewCell" customModule="Today" customModuleProvider="target">
-                                <rect key="frame" x="14" y="0.0" width="292" height="380"/>
+                                <rect key="frame" x="3" y="0.0" width="314" height="475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="292" height="380"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="475"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L38-Fi-a2S">
-                                            <rect key="frame" x="95" y="216" width="240" height="128"/>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L38-Fi-a2S">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="339"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HcA-k2-shr">
-                                            <rect key="frame" x="126" y="357" width="150" height="2"/>
+                                            <rect key="frame" x="82" y="450" width="150" height="2"/>
                                             <animations/>
                                             <color key="progressTintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         </progressView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcF-xs-Zb7">
-                                            <rect key="frame" x="24" y="311" width="42" height="21"/>
+                                        <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-1H-EBV">
+                                            <rect key="frame" x="8" y="8" width="254" height="200"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </webView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcF-xs-Zb7">
+                                            <rect key="frame" x="136" y="424" width="42" height="21"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="Hov-j6-XiK"/>
@@ -141,11 +140,6 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-1H-EBV">
-                                            <rect key="frame" x="8" y="8" width="254" height="200"/>
-                                            <animations/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </webView>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -154,10 +148,8 @@
                                 <color key="backgroundColor" red="1" green="0.10990653190000001" blue="0.1810796261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="FcF-xs-Zb7" firstAttribute="centerX" secondItem="KGI-Ps-vZO" secondAttribute="centerX" id="CbD-4H-VkS"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="FcF-xs-Zb7" secondAttribute="bottom" constant="40" id="GNk-K3-pSo"/>
-                                    <constraint firstItem="L38-Fi-a2S" firstAttribute="leading" secondItem="FcF-xs-Zb7" secondAttribute="trailing" constant="29" id="a9b-c1-VVm"/>
                                 </constraints>
-                                <size key="customSize" width="292" height="380"/>
+                                <size key="customSize" width="314" height="475"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="FcF-xs-Zb7" id="GOn-KD-u3B"/>
                                     <outlet property="snapshotImageView" destination="L38-Fi-a2S" id="FXL-yA-lXT"/>
@@ -176,7 +168,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXx-Zk-7Nf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="OEy-LM-nFD" userLabel="Exercises DS" customClass="ExercisesDataSource" customModule="Today" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="354"/>
+            <point key="canvasLocation" x="-72" y="354"/>
         </scene>
     </scenes>
     <resources>
