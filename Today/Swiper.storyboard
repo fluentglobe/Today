@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cd1-9C-kFu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cd1-9C-kFu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,13 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ZurichTheme" translatesAutoresizingMaskIntoConstraints="NO" id="heI-6c-chc">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-Cq-cBY">
+                                <rect key="frame" x="16" y="28" width="288" height="417"/>
                                 <animations/>
-                                <variation key="widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="20" y="0.0" width="3264" height="2448"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="0.0" width="3264" height="563"/>
                                 </variation>
-                            </imageView>
+                                <connections>
+                                    <segue destination="Omd-nH-bIN" kind="embed" id="0cV-g0-nIp"/>
+                                </connections>
+                            </containerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="RightToolbar" translatesAutoresizingMaskIntoConstraints="NO" id="1DY-1S-Cfp">
                                 <rect key="frame" x="0.0" y="548" width="77" height="44"/>
                                 <animations/>
@@ -50,39 +53,18 @@
                                 </items>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-Cq-cBY">
-                                <rect key="frame" x="16" y="28" width="288" height="417"/>
-                                <animations/>
-                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="20" y="0.0" width="3264" height="563"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="Omd-nH-bIN" kind="embed" id="0cV-g0-nIp"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="heI-6c-chc" secondAttribute="bottom" id="0br-TA-Q1c"/>
-                            <constraint firstItem="heI-6c-chc" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="H2f-cc-jRY"/>
                             <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="ZJO-3w-iXh" secondAttribute="bottom" id="MTr-MA-UkO"/>
-                            <constraint firstItem="heI-6c-chc" firstAttribute="top" secondItem="Cgw-Cq-cBY" secondAttribute="top" id="NjU-Xg-ZCg"/>
                             <constraint firstItem="1DY-1S-Cfp" firstAttribute="leading" secondItem="AXf-ix-ToC" secondAttribute="leadingMargin" id="Pvf-nC-lDu"/>
                             <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="1DY-1S-Cfp" secondAttribute="bottom" id="UWp-jD-TdA"/>
                             <constraint firstAttribute="trailing" secondItem="ZJO-3w-iXh" secondAttribute="trailing" id="V9y-o0-z3p"/>
-                            <constraint firstItem="heI-6c-chc" firstAttribute="bottom" secondItem="eVZ-dN-3IG" secondAttribute="top" id="e1Y-xQ-9XB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="heI-6c-chc" secondAttribute="trailing" id="qvT-LO-QRM"/>
                             <constraint firstItem="eVZ-dN-3IG" firstAttribute="top" secondItem="Cgw-Cq-cBY" secondAttribute="bottom" constant="50" id="x8g-Zk-ckD"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="0br-TA-Q1c"/>
-                            </mask>
-                        </variation>
                         <variation key="widthClass=regular">
                             <mask key="constraints">
-                                <include reference="0br-TA-Q1c"/>
                                 <exclude reference="x8g-Zk-ckD"/>
                             </mask>
                         </variation>
@@ -115,8 +97,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="314" height="475"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L38-Fi-a2S">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="339"/>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L38-Fi-a2S">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="475"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
@@ -148,6 +130,9 @@
                                 <color key="backgroundColor" red="1" green="0.10990653190000001" blue="0.1810796261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="FcF-xs-Zb7" firstAttribute="centerX" secondItem="KGI-Ps-vZO" secondAttribute="centerX" id="CbD-4H-VkS"/>
+                                    <constraint firstItem="L38-Fi-a2S" firstAttribute="top" secondItem="KGI-Ps-vZO" secondAttribute="top" id="N0u-Cd-x7I"/>
+                                    <constraint firstAttribute="bottom" secondItem="L38-Fi-a2S" secondAttribute="bottom" id="XSh-Ym-6Z5"/>
+                                    <constraint firstItem="L38-Fi-a2S" firstAttribute="centerX" secondItem="KGI-Ps-vZO" secondAttribute="centerX" id="dwF-AZ-Q1h"/>
                                 </constraints>
                                 <size key="customSize" width="314" height="475"/>
                                 <connections>
@@ -174,6 +159,5 @@
     <resources>
         <image name="New Message" width="25" height="25"/>
         <image name="Plan" width="25" height="25"/>
-        <image name="ZurichTheme" width="3264" height="2448"/>
     </resources>
 </document>

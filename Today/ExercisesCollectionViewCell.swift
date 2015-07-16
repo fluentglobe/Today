@@ -81,10 +81,11 @@ class ExercisesCollectionViewCell: UICollectionViewCell, UIWebViewDelegate {
         // self.contentView
         
         addConstraints([
-            NSLayoutConstraint(item: self, attribute: .Leading, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Leading, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self, attribute: .Trailing, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Trailing, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self, attribute: .Top, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Top, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Bottom, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self, attribute: .Leading, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Leading, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self, attribute: .Trailing, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Trailing, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self, attribute: .CenterX, relatedBy: .Equal, toItem: snapshotImageView, attribute: .CenterX, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self, attribute: .Top, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Top, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: snapshotImageView, attribute: .Bottom, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: taskProgress, attribute: .Bottom, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: nameLabel, attribute: .Bottom, multiplier: 1, constant: 0)
             ])
